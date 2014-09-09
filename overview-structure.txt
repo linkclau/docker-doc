@@ -1,0 +1,80 @@
+get an Instance
+Start an instance
+Change something inside
+ docker commit <ID> <imagename>
+
+
+docker
+* Leichtgewichtige VM
+- System Overhead
++ Version Controll
+
+
+Linux
+* "Native"
+Mac OS X
+* Boot2Docker 
+Windows
+* Boot to Docker
+
+
+No security sandbox
+
+Docker does
+* Network setup (routing, bridged, IPTABLES))
+* Process Isolation
+* IPC
+
+
+* PID 1 
+* No init
+
+
+References
+* https://www.docker.com/
+* Introduction to Docker
+  https://www.youtube.com/watch?v=Q5POuMHxW-0
+* Solomon Hykes, Founder at Docker 
+  - Changing the Landscape | LinuxCon + CloudOpen North America 2014
+  https://www.youtube.com/watch?v=UP6HxoC66nw
+
+$ time docker pull ubuntu:14.04
+Pulling repository ubuntu
+c4ff7513909d: Download complete 
+511136ea3c5a: Download complete 
+1c9383292a8f: Download complete 
+9942dd43ff21: Download complete 
+d92c3c92fa73: Download complete 
+0ea0d582fd90: Download complete 
+cc58e55aa5a5: Download complete 
+real	0m 59.28s
+user	0m 0.15s
+sys	0m 0.23s
+-----
+
+$ cat /etc/issue 
+Core Linux
+$ time docker run -i ubuntu:14.04 cat /etc/issue  
+Ubuntu 14.04.1 LTS \n \l
+
+real	0m 0.38s
+user	0m 0.03s
+sys	0m 0.04s
+
+-----
+
+
+Todo
+Setup container
+Start it (PID, /etc/issue)
+Port forwarding
+Modify it
+
+
+-----
+adduser test
+sudo apt-get update
+apt-get install python python-pip libpython2.7-dev
+pip install mercurial
+
+
